@@ -244,10 +244,8 @@ app.put('/api/carrito/:id', authenticateToken, async (req, res) => {
 });
 // -------------------- FIN DE ENDPOINTS --------------------
 
-const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => {
-  console.log(`Servidor corriendo en http://localhost:${PORT}`);
-});
+const PORT = process.env.PORT || 8080; // Usa el puerto de Railway o 8080 por defecto
+app.listen(PORT, () => console.log(`Servidor corriendo en puerto ${PORT}`));
 
 // Manejo global de errores no capturados
 process.on('unhandledRejection', (err) => {
